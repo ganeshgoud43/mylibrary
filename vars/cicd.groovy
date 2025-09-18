@@ -8,5 +8,5 @@ def gitBuild()
 }
 def gitDeploy(jobname,ipaddress,context)
 {
-  sh "scp /var/lib/jenkins/${jobname}/webapp/target/webapp.war ubuntu@${ipaddress}:/var/lib/tomcat10/webapps/${context}.war"
+  sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ipaddress}:/var/lib/tomcat10/webapps/${context}.war"
 }
